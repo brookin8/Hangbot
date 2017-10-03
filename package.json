@@ -18,5 +18,13 @@
     "random-word-generator": "^0.9.9"
   },
   "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brookin8/Hangbot.git"
+  },
+  "bugs": {
+    "url": "https://github.com/brookin8/Hangbot/issues"
+  },
+  "homepage": "https://github.com/brookin8/Hangbot#readme",
   "description": ""
 }

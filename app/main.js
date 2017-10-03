@@ -30,7 +30,7 @@ document.onreadystatechange = function() { //boilerplate
 }
 
 function reset() {
-	hangbotImage.src = "../docs/Bender_Rodriguez_gallows.png";
+	hangbotImage.src = "Bender_Rodriguez_gallows.png";
 	guessPanel.style.display = 'none';
 	displayResult.innerHTML = '';
 	previousGuesses.innerHTML = '';
@@ -46,7 +46,7 @@ function newGame() {
 	guessPanel.style.display = 'block';
 	wordScreen.style.display = 'block';
 	displayResult.innerHTML = '';
-	hangbotImage.src = "../docs/Bender_Rodriguez_gallows.png";
+	hangbotImage.src = "Bender_Rodriguez_gallows.png";
 	space1.innerHTML = '';
 	space2.innerHTML = '';
 	space3.innerHTML = '';
@@ -94,25 +94,25 @@ function guessSubmit() {
 		previousGuesses.innerHTML += guess;
 		switch (missCounter) { //Case statement to assign a math function to each operator button (which are strings)
 			case 1:
-				hangbotImage.src = "../docs/Bender_1.png"
+				hangbotImage.src = "Bender_1.png"
 				break;
 			case 2:
-				hangbotImage.src = "../docs/Bender_2.png"
+				hangbotImage.src = "Bender_2.png"
 				break;
 			case 3:
-				hangbotImage.src = "../docs/Bender_3.png"
+				hangbotImage.src = "Bender_3.png"
 				break;
 			case 4:
-				hangbotImage.src = "../docs/Bender_4.png"
+				hangbotImage.src = "Bender_4.png"
 				break;
 			case 5:
-				hangbotImage.src = "../docs/Bender_5.png"
+				hangbotImage.src = "Bender_5.png"
 				break;
 			case 6:
-				hangbotImage.src = "../docs/Bender_6.png"
+				hangbotImage.src = "Bender_6.png"
 				break;
 			case 7:
-				hangbotImage.src = "../docs/Bender_7.png"
+				hangbotImage.src = "Bender_7.png"
 				youLose();
 				break;
 		}
