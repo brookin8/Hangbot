@@ -54,7 +54,7 @@ function newGame() {
 	space5.innerHTML = '';
 	space6.innerHTML = '';
 	guess.value = '';
-	previousGuesses.innerHTML += "<h3>Previous Guesses:</h3>";
+	previousGuesses.innerHTML = "<h3>Previous Guesses:</h3>";
 
 }
 
