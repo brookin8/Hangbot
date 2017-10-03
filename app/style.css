@@ -70,14 +70,16 @@ h1 {
 
 #guessPanel {
 	display:none;
+	text-align:center;
 }
 
 #displayResult {
 	font-size:170%;
-	margin-top:30%;
+	margin-top:25%;
 	color:#AE1134;
 	text-align:center;
 	height:40%;
+	font-weight:bold;
 }
 
 .hangbot {
@@ -104,8 +106,10 @@ h1 {
 
 .guessInput {
 	padding:5%;
-	font-size:180%;
+	font-size:200%;
 	width:20%;
+	border: 2px solid #000;
+	text-align:center;
 }
 
 #newGameButton {
@@ -123,6 +127,10 @@ h1 {
 
 #submitButton {
 	border: 2px solid #000;
+	background-color:#1AADAB;
+	color:#fff;
+	padding:3%;
+	font-size:120%;
 
 }
 

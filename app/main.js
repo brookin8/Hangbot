@@ -63,6 +63,7 @@ function guessSubmit() {
 	guess.defaultValue = '';
 	if (newWord.includes(guess)) {
 		displayResult.innerHTML = "Fun on the Bun! You got it!";
+		displayResult.style.color = '#1AADAB';
 		for(var i=0; i<newWord.length;i++) {
 			if(guess === newWord[i]) {
 				var letterNumber = i + 1;
@@ -98,6 +99,7 @@ function guessSubmit() {
 	} else {
 		missCounter += 1; 
 		displayResult.innerHTML = "Good News, Everyone! That wasn't in the word.";
+		displayResult.style.color = '#AE1134';
 		switch (missCounter) { //Case statement to assign a math function to each operator button (which are strings)
 			case 1:
 				hangbotImage.src = "Bender_1.png"
@@ -135,12 +137,15 @@ function guessSubmit() {
 function checkForWin() {
 	if(space1.innerHTML !== '' && space2.innerHTML !== '' && space3.innerHTML !== '' && space4.innerHTML !== '' &&  space5.innerHTML !== '' && space6.innerHTML !== '') {
 		displayResult.innerHTML = "You win!! Kill all humans!"
+		displayResult.style.color = '#1AADAB';
+		hangbotImage.src = "Bender_Celebrate.jpg";
 	}
 
 }
 
 function youLose() {
 	displayResult.innerHTML = "You Lose. But at least I get a beer."
+	displayResult.style.color = '#AE1134';
 	space1.innerHTML = newWord[0];
 	space2.innerHTML = newWord[1];
 	space3.innerHTML = newWord[2];
