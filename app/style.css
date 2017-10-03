@@ -1,0 +1,104 @@
+body {
+	background-color:#D3D3D3;
+}
+
+h1 {
+	color:#FAF4C2;
+	text-shadow: 
+   		-4px -4px 0 #279CA9,  
+    	4px -4px 0 #279CA9,
+    	-4px 4px 0 #279CA9,
+     	4px 4px 0 #279CA9,
+     	6px 6px 0 #9F000F;
+	font-size:400%;
+	font-family: 'Voltaire', sans-serif;
+
+}
+
+#previousGuesses {
+	text-align:left;
+	font-size:200%;
+	padding-left:5%;
+	padding-bottom:10%;
+}
+
+#wordScreen {
+	margin-left:20%;
+	margin-bottom:5%;
+	display:none;
+	padding-top:15%;
+
+
+}
+
+.headingSection {
+	text-align:center;
+}
+
+.space {
+	height:50px;
+	width:50px;
+	font-size: 25px;
+	padding-top:8px;
+	color:#000000;
+}
+
+.outline1 {
+	border-right: 2px solid #000;
+	border-bottom: 2px solid #000;
+	border-left: 2px solid #000;
+	border-top: 2px solid #000;
+}
+
+.outline {
+	border-right: 2px solid #000;
+	border-bottom: 2px solid #000;
+	border-top: 2px solid #000;
+
+}
+
+#guessPanel {
+	display:none;
+}
+
+#displayResult {
+	font-size:180%;
+	margin-top:15%;
+	color:#AE1134;
+	text-align:center;
+	height:30%;
+}
+
+.hangbot {
+	text-align:center;
+}
+
+#updateImage {
+	margin-top:5%;
+	margin-bottom:5%;
+	margin-left:auto;
+	margin-right:auto;
+	background-color:#000000;
+	padding-top:3%;
+	padding-bottom:3%;
+}
+
+#newGame {
+	margin-left:auto;
+	margin-right:auto;
+	text-align:center;
+	padding-top:3%;
+}
+
+#newGameButton {
+	width:40%;
+	font-size:130%;
+	background-color:#1AADAB;
+	color:#ffffff;
+
+}
+
+.hangbotImage {
+	padding-top:4%;
+}
+

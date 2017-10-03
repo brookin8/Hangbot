@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hangbot</title>
+
+	<!-- Bootstrap CSS CDN-->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<link href="https://fonts.googleapis.com/css?family=Voltaire" rel="stylesheet">
+
+	<!-- My CSS file -->
+	<link rel="stylesheet" href="style.css">
+
+
+	<!--JQuery-->
+	<script
+	  src="https://code.jquery.com/jquery-3.2.1.min.js"
+	  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+	  crossorigin="anonymous"></script>
+ 
+	<!--Bootstrap JS CDN-->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+</head>
+<body class = "container">
+
+	<div class = "row headingSection">
+		<div class = "col-xs-12">
+			<h1 style="padding-top:3%">HANGBOT</h1>
+		</div>
+	</div>
+<div id ="newGame">
+	<div class = "row">
+		<div class ="col-xs-12">
+			<button class="btn" id="newGameButton">New Game</button>
+		</div>
+	</div>
+</div>
+<div class ="hangbot container">
+	<div class = "hangbotImage">
+		<div class = "row">
+			<div class = "col-xs-6">
+				<div class="row" id="guessPanel">
+					<h3>Your guess goes here:</h3>
+					<input type="text" maxlength="1" id="guess";>
+					<button id="submitButton">Submit</button>
+					<div id ="displayResult">You win!</div>
+				</div>
+				<div id="wordScreen">
+					<div class="row">
+						<div class = "col-xs-2 space outline1" id ="space1"></div>
+						<div class = "col-xs-2 space outline" id ="space2"></div>
+						<div class = "col-xs-2 space outline" id ="space3"></div>
+						<div class = "col-xs-2 space outline" id ="space4"></div>
+						<div class = "col-xs-2 space outline" id ="space5"></div>
+						<div class = "col-xs-2 space outline" id ="space6"></div>
+					</div>
+				</div>
+			</div>
+			<div class = "col-xs-6">
+				<img src = "../docs/Bender_Rodriguez_gallows.png" id="updateImage">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12" id="previousGuesses">
+			</div>
+		</div>
+	</div>
+
+</div>
+
+<!--<script src = "words.js"></script>-->
+<!--<script src="main.js"></script>-->
+<script src="main.js"></script>
+</body>
+</html>
