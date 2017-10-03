@@ -1,4 +1,4 @@
-var words = ['purple', 'orange', 'family', 'twelve', 'silver', 'thirty', 'donate', 'people', 'future', 'Heaven', 'banana', 'Africa', 'Monday', 'office', 'nature', 'eleven', 'animal', 'twenty', 'snitch', 'Friday', 'Father', 'yellow', 'poetry', 'August', 'broken', 'potato', 'Sunday', 'circle', 'school', 'breath', 'moment', 'circus', 'person', 'scarce', 'London', 'energy', 'sister', 'spring', 'change', 'monkey', 'system', 'secret', 'pirate', 'turtle', 'ninety', 'mother', 'winter', 'bucket', 'doctor', 'strong', 'forest', 'joyful', 'memory', 'season','Friend', 'ending', 'loving', 'cookie', 'silent', 'talent', 'turkey', 'better', 'bottle', 'happen', 'wonder', 'number', 'little', 'spirit', 'melody', 'lovely', 'ginger', 'cousin', 'couple', 'bridge', 'tomato', 'enough', 'dragon', 'lonely', 'beaver', 'market', 'health', 'beauty', 'simple'];
+var words = ['purple', 'orange', 'family', 'twelve', 'silver', 'thirty', 'donate', 'people', 'future', 'Heaven', 'banana','office', 'nature', 'eleven', 'animal', 'twenty', 'snitch', 'father', 'yellow', 'poetry', 'broken', 'potato','circle', 'school', 'breath', 'moment', 'circus', 'person', 'scarce', 'energy', 'sister', 'spring', 'change', 'monkey', 'system', 'secret', 'pirate', 'turtle', 'ninety', 'mother', 'winter', 'bucket', 'doctor', 'strong', 'forest', 'joyful', 'memory', 'season','friend', 'ending', 'loving', 'cookie', 'silent', 'talent', 'turkey', 'better', 'bottle', 'happen', 'wonder', 'number', 'little', 'spirit', 'melody', 'lovely', 'ginger', 'cousin', 'couple', 'bridge', 'tomato', 'enough', 'dragon', 'lonely', 'beaver', 'market', 'health', 'beauty', 'simple'];
 
 
 var newWord = '';
@@ -19,6 +19,7 @@ var hitCounter = 0;
 var display = document.getElementById('displayResult');
 var wordScreen = document.getElementById('wordScreen');
 var previousGuesses = document.getElementById('previousGuesses');
+
 
 
 
@@ -60,7 +61,7 @@ function newGame() {
 }
 
 function guessSubmit() {
-	var guess = document.getElementById("guess").value;
+	var guess = document.getElementById("guess").value.toLowerCase();
 	if (newWord.includes(guess)) {
 		displayResult.innerHTML = "Fun on the Bun! You got it!";
 		displayResult.style.color = '#1AADAB';

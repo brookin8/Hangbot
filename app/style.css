@@ -23,6 +23,8 @@ h1 {
 	background-color:#fff;
 	border: 2px solid #000;
 	display:none;
+	margin-left:7%;
+	width:80%;
 }
 
 #wordScreen {
