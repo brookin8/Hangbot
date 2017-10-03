@@ -47,6 +47,7 @@ function newGame() {
 	wordScreen.style.display = 'block';
 	previousGuesses.style.display = 'block';
 	displayResult.innerHTML = '';
+	missCounter = 0;
 	hangbotImage.src = "Bender_Rodriguez_gallows.png";
 	space1.innerHTML = '';
 	space2.innerHTML = '';
@@ -60,7 +61,6 @@ function newGame() {
 
 function guessSubmit() {
 	var guess = document.getElementById("guess").value;
-	guess.defaultValue = '';
 	if (newWord.includes(guess)) {
 		displayResult.innerHTML = "Fun on the Bun! You got it!";
 		displayResult.style.color = '#1AADAB';
@@ -70,27 +70,21 @@ function guessSubmit() {
 				switch (letterNumber) { //Case statement to assign a math function to each operator button (which are strings)
 					case 1:
 						space1.innerHTML = guess;
-						guess.value = '';
 						break;
 					case 2:
 						space2.innerHTML = guess;
-						guess.value = '';
 						break;
 					case 3:
 						space3.innerHTML = guess;
-						guess.value = '';
 						break;
 					case 4:
 						space4.innerHTML = guess;
-						guess.value = '';
 						break;
 					case 5:
 						space5.innerHTML = guess;
-						guess.value = '';
 						break;
 					case 6:
 						space6.innerHTML = guess;
-						guess.value = '';
 						break;
 				}
 			}
