@@ -42,12 +42,11 @@
 			<div class = "col-xs-6">
 				<div class="row" id="guessPanel">
 					<h3>Your guess goes here:</h3>
-					<input type="text" maxlength="1" id="guess";>
-					<button id="submitButton">Submit</button>
-					<div id ="displayResult">You win!</div>
-				</div>
-				<div id="wordScreen">
-					<div class="row">
+					<input type="text" class="guessInput" maxlength="1" id="guess" onfocus="value=''">
+					<button class ="btn" id="submitButton" type="submit">Submit</button>
+					<div id="wordScreen">
+					<div id="wordToGuess">
+						<h3>The word:</h3>
 						<div class = "col-xs-2 space outline1" id ="space1"></div>
 						<div class = "col-xs-2 space outline" id ="space2"></div>
 						<div class = "col-xs-2 space outline" id ="space3"></div>
@@ -55,7 +54,10 @@
 						<div class = "col-xs-2 space outline" id ="space5"></div>
 						<div class = "col-xs-2 space outline" id ="space6"></div>
 					</div>
+					</div>
+					<div id ="displayResult">You win!</div>
 				</div>
+				
 			</div>
 			<div class = "col-xs-6">
 				<img src = "../docs/Bender_Rodriguez_gallows.png" id="updateImage">

@@ -20,14 +20,24 @@ h1 {
 	font-size:200%;
 	padding-left:5%;
 	padding-bottom:10%;
+	background-color:#fff;
+	border: 2px solid #000;
+	display:none;
 }
 
 #wordScreen {
-	margin-left:20%;
+
 	margin-bottom:5%;
 	display:none;
-	padding-top:15%;
+	padding-top:5%;
+	padding-left:20%;
+	padding-right:auto;
 
+}
+
+#wordToGuess {
+	margin:auto;
+	text-align:left;
 
 }
 
@@ -39,8 +49,9 @@ h1 {
 	height:50px;
 	width:50px;
 	font-size: 25px;
-	padding-top:8px;
-	color:#000000;
+	color:#000;
+	padding-top:1%;
+	background-color:#fff;
 }
 
 .outline1 {
@@ -62,11 +73,11 @@ h1 {
 }
 
 #displayResult {
-	font-size:180%;
-	margin-top:15%;
+	font-size:170%;
+	margin-top:30%;
 	color:#AE1134;
 	text-align:center;
-	height:30%;
+	height:40%;
 }
 
 .hangbot {
@@ -81,6 +92,7 @@ h1 {
 	background-color:#000000;
 	padding-top:3%;
 	padding-bottom:3%;
+	border:4px solid #279CA9;
 }
 
 #newGame {
@@ -90,15 +102,27 @@ h1 {
 	padding-top:3%;
 }
 
+.guessInput {
+	padding:5%;
+	font-size:180%;
+	width:20%;
+}
+
 #newGameButton {
 	width:40%;
 	font-size:130%;
 	background-color:#1AADAB;
 	color:#ffffff;
+	border:2px solid #000;
 
 }
 
 .hangbotImage {
 	padding-top:4%;
+}
+
+#submitButton {
+	border: 2px solid #000;
+
 }
 

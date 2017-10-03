@@ -24,12 +24,12 @@ var previousGuesses = document.getElementById('previousGuesses');
 
 document.onreadystatechange = function() { //boilerplate
 	if (document.readyState === "interactive") { //boilerplate
-		reset();
+		resets();
 		newGameButton.addEventListener("click", newGame); //When a digit button is clicked, we run the ButtonLogic function
 	}
 }
 
-function reset() {
+function resets() {
 	hangbotImage.src = "Bender_Rodriguez_gallows.png";
 	guessPanel.style.display = 'none';
 	displayResult.innerHTML = '';
@@ -45,6 +45,7 @@ function newGame() {
 	submitButton.addEventListener("click", guessSubmit);
 	guessPanel.style.display = 'block';
 	wordScreen.style.display = 'block';
+	previousGuesses.style.display = 'block';
 	displayResult.innerHTML = '';
 	hangbotImage.src = "Bender_Rodriguez_gallows.png";
 	space1.innerHTML = '';
@@ -53,13 +54,13 @@ function newGame() {
 	space4.innerHTML = '';
 	space5.innerHTML = '';
 	space6.innerHTML = '';
-	guess.value = '';
 	previousGuesses.innerHTML = "<h3>Previous Guesses:</h3>";
 
 }
 
 function guessSubmit() {
 	var guess = document.getElementById("guess").value;
+	guess.defaultValue = '';
 	if (newWord.includes(guess)) {
 		displayResult.innerHTML = "Fun on the Bun! You got it!";
 		for(var i=0; i<newWord.length;i++) {
@@ -68,21 +69,27 @@ function guessSubmit() {
 				switch (letterNumber) { //Case statement to assign a math function to each operator button (which are strings)
 					case 1:
 						space1.innerHTML = guess;
+						guess.value = '';
 						break;
 					case 2:
 						space2.innerHTML = guess;
+						guess.value = '';
 						break;
 					case 3:
 						space3.innerHTML = guess;
+						guess.value = '';
 						break;
 					case 4:
 						space4.innerHTML = guess;
+						guess.value = '';
 						break;
 					case 5:
 						space5.innerHTML = guess;
+						guess.value = '';
 						break;
 					case 6:
 						space6.innerHTML = guess;
+						guess.value = '';
 						break;
 				}
 			}
@@ -91,28 +98,34 @@ function guessSubmit() {
 	} else {
 		missCounter += 1; 
 		displayResult.innerHTML = "Good News, Everyone! That wasn't in the word.";
-		previousGuesses.innerHTML += guess;
 		switch (missCounter) { //Case statement to assign a math function to each operator button (which are strings)
 			case 1:
 				hangbotImage.src = "Bender_1.png"
+				previousGuesses.innerHTML += guess;
 				break;
 			case 2:
 				hangbotImage.src = "Bender_2.png"
+				previousGuesses.innerHTML += (" , " + guess);
 				break;
 			case 3:
 				hangbotImage.src = "Bender_3.png"
+				previousGuesses.innerHTML += (" , " + guess);
 				break;
 			case 4:
 				hangbotImage.src = "Bender_4.png"
+				previousGuesses.innerHTML += (" , " + guess);
 				break;
 			case 5:
 				hangbotImage.src = "Bender_5.png"
+				previousGuesses.innerHTML += (" , " + guess);
 				break;
 			case 6:
 				hangbotImage.src = "Bender_6.png"
+				previousGuesses.innerHTML += (" , " + guess);
 				break;
 			case 7:
 				hangbotImage.src = "Bender_7.png"
+				previousGuesses.innerHTML += (" , " + guess);
 				youLose();
 				break;
 		}
