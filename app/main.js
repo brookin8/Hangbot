@@ -16,9 +16,11 @@ var space5 = document.getElementById('space5');
 var space6 = document.getElementById('space6');
 var missCounter = 0;
 var hitCounter = 0;
-var display = document.getElementById('displayResult');
+var displayResult = document.getElementById('displayResult');
 var wordScreen = document.getElementById('wordScreen');
 var previousGuesses = document.getElementById('previousGuesses');
+var spaces = document.getElementsByClassName('space');
+var wordSpaces = document.getElementById('wordSpaces');
 
 
 
@@ -50,12 +52,12 @@ function newGame() {
 	displayResult.innerHTML = '';
 	missCounter = 0;
 	hangbotImage.src = "Bender_Rodriguez_gallows.png";
-	space1.innerHTML = '';
-	space2.innerHTML = '';
-	space3.innerHTML = '';
-	space4.innerHTML = '';
-	space5.innerHTML = '';
-	space6.innerHTML = '';
+	wordSpaces.innerHTML = "<div class = 'col-xs-2 space outline1'></div>"
+
+	for (var i=1;i<newWord.length;i++) {
+		wordSpaces.innerHTML += "<div class = 'col-xs-2 space outline'></div>";
+	}
+	
 	previousGuesses.innerHTML = "<h3>Previous Guesses:</h3>";
 
 }
@@ -67,29 +69,9 @@ function guessSubmit() {
 		displayResult.style.color = '#1AADAB';
 		for(var i=0; i<newWord.length;i++) {
 			if(guess === newWord[i]) {
-				var letterNumber = i + 1;
-				switch (letterNumber) { //Case statement to assign a math function to each operator button (which are strings)
-					case 1:
-						space1.innerHTML = guess;
-						break;
-					case 2:
-						space2.innerHTML = guess;
-						break;
-					case 3:
-						space3.innerHTML = guess;
-						break;
-					case 4:
-						space4.innerHTML = guess;
-						break;
-					case 5:
-						space5.innerHTML = guess;
-						break;
-					case 6:
-						space6.innerHTML = guess;
-						break;
+				spaces[i].innerHTML = guess;
 				}
 			}
-		}
 		checkForWin();
 	} else {
 		missCounter += 1; 
@@ -130,7 +112,13 @@ function guessSubmit() {
 }
 
 function checkForWin() {
-	if(space1.innerHTML !== '' && space2.innerHTML !== '' && space3.innerHTML !== '' && space4.innerHTML !== '' &&  space5.innerHTML !== '' && space6.innerHTML !== '') {
+	var checkForWinVar = 0;
+	for(var i=0; i<spaces.length; i++) {
+		if(spaces[i].innerHTML !== '') {
+			checkForWinVar += 1;
+		}
+	} 
+	if (checkForWinVar === spaces.length) {
 		displayResult.innerHTML = "You win!! Kill all humans!"
 		displayResult.style.color = '#1AADAB';
 		hangbotImage.src = "Bender_Celebrate.jpg";
@@ -141,12 +129,9 @@ function checkForWin() {
 function youLose() {
 	displayResult.innerHTML = "You Lose. But at least I get a beer."
 	displayResult.style.color = '#AE1134';
-	space1.innerHTML = newWord[0];
-	space2.innerHTML = newWord[1];
-	space3.innerHTML = newWord[2];
-	space4.innerHTML = newWord[3];
-	space5.innerHTML = newWord[4];
-	space6.innerHTML = newWord[5];
+	for(var i=0; i<spaces.length; i++) {
+		spaces[i].innerHTML = newWord[i];
+	}
 
 }
 
