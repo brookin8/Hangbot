@@ -19,12 +19,12 @@ h1 {
 	text-align:left;
 	font-size:200%;
 	padding-left:5%;
-	padding-bottom:10%;
 	background-color:#fff;
 	border: 2px solid #000;
 	display:none;
 	margin-left:7%;
 	width:80%;
+	padding-bottom:3%;
 }
 
 #wordScreen {
